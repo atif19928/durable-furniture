@@ -1,0 +1,392 @@
+   :root {
+       --primary-color: #2C5F6D;
+       --secondary-color: #D4AF37;
+       --bg-light: #FFFFFF;
+       --bg-soft: #FBFBFB;
+       --text-dark: #333333;
+       --text-light: #FFFFFF;
+       --transition: 0.3s ease;
+   }
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+   }
+
+   html {
+       scroll-behavior: smooth;
+   }
+
+   body {
+       background-color: var(--bg-soft);
+   }
+
+   /* ya top navbar ka code haiu  */
+   .top-nav {
+       background-color: var(--primary-color);
+       padding: 10px 0;
+   }
+
+   /* Logo Styling - Responsive */
+   .main-logo {
+       height: 80px;
+       width: auto;
+       max-width: 250px;
+       object-fit: contain;
+       display: block;
+   }
+
+   /* Search Container */
+   .search-container {
+       display: flex;
+       background: white;
+       overflow: hidden;
+       padding: 5px;
+       border-radius: 5px;
+       width: 100%;
+       max-width: 400px;
+   }
+
+   .search-container input {
+       padding: 8px 15px;
+       outline: none;
+       border: none;
+       flex: 1;
+       font-size: 14px;
+   }
+
+   .search-container button {
+       background: var(--secondary-color);
+       padding: 8px 20px;
+       color: white;
+       font-weight: bold;
+       cursor: pointer;
+       border: none;
+       border-radius: 3px;
+       transition: var(--transition);
+   }
+
+   .search-container button:hover {
+       background: #b8941e;
+   }
+
+   /* Account Links */
+   .account-links ul {
+       display: flex;
+       list-style: none;
+       gap: 20px;
+       margin: 0;
+       padding: 0;
+       align-items: center;
+   }
+
+   .account-links a {
+       text-decoration: none;
+       color: var(--text-light);
+       font-weight: 500;
+       font-size: 14px;
+       transition: var(--transition);
+   }
+
+   .account-links a:hover {
+       color: var(--secondary-color);
+   }
+
+   .signup-btn {
+       background-color: var(--secondary-color) !important;
+       color: var(--text-dark) !important;
+       padding: 8px 18px;
+       border-radius: 5px;
+       font-weight: bold;
+       transition: var(--transition);
+   }
+
+   .signup-btn:hover {
+       background-color: #b8941e !important;
+       color: white !important;
+   }
+
+   /* Mobile Search Collapse */
+   #mobileSearch {
+       background-color: var(--primary-color);
+   }
+
+   /* ========== ya second navabar ka code hai  ========== */
+   #second-nav {
+       background-color: var(--secondary-color);
+       padding: 8px 0;
+       position: relative;
+       z-index: 1000;
+   }
+
+   #second-nav .navbar-nav {
+       gap: 10px;
+   }
+
+   #second-nav .nav-item {
+       list-style: none;
+   }
+
+   #second-nav .nav-link {
+       text-decoration: none;
+       color: var(--text-dark);
+       font-weight: 600;
+       text-transform: uppercase;
+       font-size: 15px;
+       padding: 8px 18px;
+       transition: var(--transition);
+       border-radius: 25px;
+   }
+
+   #second-nav .nav-link:hover {
+       background-color: var(--primary-color);
+       color: var(--bg-light) !important;
+   }
+
+   /* Dropdown Styling */
+   .dropdown-menu {
+       background-color: var(--primary-color);
+       border: none;
+       border-radius: 10px;
+       padding: 10px 0;
+       margin-top: 5px;
+   }
+
+   .dropdown-menu .dropdown-item {
+       color: white;
+       padding: 8px 20px;
+       font-size: 14px;
+       transition: var(--transition);
+   }
+
+   .dropdown-menu .dropdown-item:hover {
+       background-color: var(--secondary-color);
+       color: var(--text-dark);
+       padding-left: 28px;
+   }
+
+   /* Navbar Toggler for Mobile */
+   .navbar-toggler {
+       background-color: var(--primary-color);
+       border: none;
+       padding: 8px 12px;
+   }
+
+   .navbar-toggler-icon {
+       filter: invert(1);
+   }
+
+   /* Container Fix */
+   .container-fluid {
+       width: 100%;
+       padding-left: 5%;
+       padding-right: 5%;
+   }
+
+   /* ========== RESPONSIVE DESIGN ========== */
+   
+  /* ========== RESPONSIVE DESIGN (PERFECT MOBILE LAYOUT) ========== */
+
+@media (max-width: 768px) {
+    /* 1. Teal Bar Padding Adjust ki taake height zyada na ho */
+    .top-nav {
+        padding: 8px 0 !important; 
+    }
+
+    /* 2. Container me flex-wrap ko 'wrap' kiya taake search bar automatic niche adjust ho */
+    .top-nav .container-fluid {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap !important; /* Elements ko zaroorat parne par automatic niche line me bhejega */
+        gap: 8px !important;
+    }
+
+    /* 3. LOGO: Size normal aur bada rahega, kharab nahi hoga */
+    .main-logo {
+        height: 55px !important;    
+        max-width: 150px !important;
+        width: auto !important;
+        object-fit: contain;
+    }
+
+    /* 4. BUTTONS SIDE: Login aur Sign-up ko ek sath right side par tight rakkha */
+    .account-links {
+        margin-right: 0 !important;
+    }
+
+    .account-links ul {
+        gap: 10px !important;
+    }
+
+    .account-links a {
+        font-size: 14px !important;
+        white-space: nowrap !important; /* Login text ko tootne nahi dega */
+    }
+
+    /* Sign-up Button Fix: 'white-space: nowrap' se text ek hi line me rahega aur dabba bada rahega */
+    .signup-btn {
+        padding: 6px 14px !important; 
+        font-size: 13px !important;
+        white-space: nowrap !important; /* Is se 'Sign-up' kabhi toot kar do lines me nahi aayega */
+        display: inline-block !important;
+    }
+
+    /* 5. SEARCH WRAPPER FIX: Yeh automatic Logo aur Buttons ke niche full-width me dhal jayega */
+    .search-wrapper {
+        order: 3 !important; /* Is se search bar teesre number par automatic niche chala jayenge */
+        width: 100% !important; /* Mobile par full width le kar aaye ga */
+        max-width: 100% !important;
+        margin-top: 4px !important;
+    }
+
+    .search-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 2px !important;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .search-container input {
+        padding: 6px 12px !important;
+        font-size: 13px !important;
+    }
+
+    .search-container button {
+        padding: 6px 15px !important;
+        font-size: 13px !important;
+    }
+
+    /* Second Navbar Mobile (Yellow Bar) */
+    #second-nav {
+        padding: 6px 10px;
+    }
+    #second-nav .navbar-nav {
+        gap: 5px;
+        padding: 5px 0;
+    }
+}
+
+/* Chote Mobile Screens (480px aur us se niche) */
+@media (max-width: 480px) {
+    .main-logo {
+        height: 68px !important; /* Thoda sa adjust kiya taake small mobile par fit baithe */
+    }
+    
+    .account-links ul {
+        gap: 8px !important;
+    }
+    
+    .signup-btn {
+        padding: 5px 10px !important;
+        font-size: 12px !important;
+    }
+}
+
+   /* Card Styles (Aapke existing styles) */
+   .card-img-top {
+       height: 250px;
+       object-fit: cover;
+       width: 100%;
+   }
+
+   .card {
+       width: 100% !important;
+       margin: 0 !important;
+       transition: all 0.3s ease;
+   }
+
+   .card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+   }
+
+   .sale-tag {
+       position: absolute;
+       top: 10px;
+       left: 10px;
+       background-color: #ff4757;
+       color: white;
+       padding: 4px 10px;
+       font-size: 12px;
+       font-weight: bold;
+       border-radius: 4px;
+       z-index: 2;
+   }
+
+   .btn-cart {
+       background-color: #2C5F6D;
+       color: white;
+       border: none;
+       padding: 10px;
+       font-size: 14px;
+       transition: 0.3s;
+   }
+
+   .btn-cart:hover {
+       background-color: #D4AF37;
+       color: white;
+   }
+
+   /* Footer Styles */
+   .footer-section {
+       font-family: 'Poppins', sans-serif;
+       letter-spacing: 0.5px;
+   }
+
+   .footer-logo {
+       color: #ffc107;
+   }
+
+   .footer-text {
+       font-size: 0.9rem;
+       line-height: 1.6;
+       color: #bbb;
+   }
+
+   .footer-link {
+       color: var(--bg-light);
+       text-decoration: none;
+       transition: 0.3s ease;
+       font-size: 0.95rem;
+   }
+
+   .footer-link:hover {
+       color: var(--secondary-color) !important;
+       padding-left: 5px;
+   }
+
+   .thanks-heading {
+       color: var(--secondary-color);
+   }
+
+   .text-uppercase {
+       color: var(--secondary-color);
+   }
+
+   .social-icons a {
+       color: var(--bg-light);
+       font-size: 1.2rem;
+       transition: 0.4s;
+       display: inline-block;
+   }
+
+   .social-icons a:hover {
+       color: var(--secondary-color);
+       transform: translateY(-3px);
+   }
+
+   .copyright-text {
+       font-size: 0.85rem;
+       color: #888;
+   }
+
+   .border-top {
+       border-color: rgba(255, 255, 255, 0.1) !important;
+   }

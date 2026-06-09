@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-nav {
+    background-color: #2D5F6E;
+}
+
+/* LOGO */
+.main-logo {
+    height: 80px;
+}
+
+/* SEARCH */
+.search-container {
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-container input {
+    border: none;
+    padding: 8px;
+    width: 220px;
+}
+
+.search-container button {
+    background: #D4AF37;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+}
+
+/* ACCOUNT */
+.account-links ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.account-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* SECOND NAV */
+#second-nav {
+    background: #D4AF37;
+}
+
+#second-nav .nav-link {
+    color: black;
+}
+
+/* CONTACT MAIN BOX */
+.contact-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-left: 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* BUTTON */
+.send-btn {
+    background: #2D5F6E;
+    color: white;
+}
+
+.send-btn:hover {
+    background: #D4AF37;
+}
+
+/* ICON: Gol dibbe ke andar icon ka color white set kiya */
+.icon {
+    color: white !important; 
+}
+
+#mobileSearch {
+    background: white;
+    z-index: 1000;
+}
+
+/* =======================================================
+   🔥 CONTACT INFO PREMIUM LOOK STYLING
+   ======================================================= */
+.contact-info-container {
+    padding-left: 15px;
+}
+
+.contact-info-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px; 
+    gap: 15px;
+}
+
+.icon-box {
+    width: 44px;
+    height: 44px;
+    background-color: #2D5F6E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(45, 95, 110, 0.2);
+}
+
+.text-box span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.text-box p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* =======================================================
+   
+   ======================================================= */
+@media (max-width: 768px) {
+    /* 1. Navbar Mobile Spacing & Height Fix */
+    .top-nav {
+        padding: 8px 0 !important; 
+    }
+
+    .top-nav .container-fluid {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap !important; /* Taake search bar space bacha kar automatic niche aaye */
+        gap: 8px !important;
+    }
+
+    /* Logo size mobile par proper set kiya */
+    .main-logo {
+        height: 55px !important;    
+        max-width: 150px !important;
+        width: auto !important;
+        object-fit: contain;
+    }
+
+    /* Signup button text nowrap taake toote nahi */
+    .account-links ul {
+        gap: 10px !important;
+    }
+
+    .account-links a {
+        font-size: 14px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Search bar auto row setting */
+    .search-wrapper {
+        order: 3 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 4px !important;
+    }
+
+    .search-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .search-container input {
+        width: 100%;
+        padding: 6px 12px !important;
+        font-size: 13px !important;
+    }
+
+    /* 2. Contact Section Mobile Layout Fix */
+    .contact-box {
+        margin-left: 0;
+        padding: 20px;
+    }
+    
+    .contact-info-container {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    
+    .info-item {
+        margin-bottom: 18px;
+    }
+}
+
+/* Chote Mobile Screens (480px) */
+@media (max-width: 480px) {
+    .main-logo {
+        height: 48px !important;
+    }
+    
+    .account-links ul {
+        gap: 8px !important;
+    }
+}
